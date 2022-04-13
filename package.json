@@ -1,0 +1,20 @@
+{
+  "name": "desafiotype",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/app.ts",
+    "start:ts": "ts- node ./src/app.ts",
+    "dev": "ts-node-dev --transpile-only src/app.ts"
+  },
+  "author": "Mateus",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8"
+  },
+  "description": ""
+}
