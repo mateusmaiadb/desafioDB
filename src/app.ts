@@ -17,7 +17,7 @@ function calcularCedulas(troco: number): void {
   }
 }
 
-// calcularCedulas(calcularTroco(valorPago, valorCompra));
+calcularCedulas(calcularTroco(valorPago, valorCompra));
 
 function calcularMoedas(troco: number): void {
   for (var i = 0; i < moedas.length; i++) {
