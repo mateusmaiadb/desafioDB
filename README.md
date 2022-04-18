@@ -24,6 +24,6 @@ Valor pago: R$3.00
 
 Resultado esperado: 1 moeda de R$1.00
 
-#
+
 
 <img src="logoTypesScript.svg" alt="Logo TypeScript">
