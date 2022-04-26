@@ -4,22 +4,24 @@ var troco: number;
 var valorPago = 100.49;
 var valorCompra = 100;
 
-function calcularTroco(valorPago: number, valorCompra: number): number {
+
+export function calcularTroco(valorPago: number, valorCompra: number): number {
   troco = valorPago - valorCompra;
   return troco;
 }
 
-function calcularCedulas(troco: number): void {
+export function calcularTrocoComCedulas(troco: number): number {
   for (var i = 0; i < cedulas.length; i++) {
     var qtdCedulas = Math.floor(troco / cedulas[i]);
     troco = troco % cedulas[i];
     console.log("Cédula de " + cedulas[i] + " quantidade: " + qtdCedulas);
   }
+  return troco;
 }
 
-calcularCedulas(calcularTroco(valorPago, valorCompra));
+// calcularTrocoComCedulas(calcularTroco(valorPago, valorCompra));
 
-function calcularMoedas(troco: number): void {
+export function calcularMoedas(troco: number): void {
   for (var i = 0; i < moedas.length; i++) {
     var qtdMoedas = Math.floor(troco / moedas[i]);
     troco = troco % moedas[i];
