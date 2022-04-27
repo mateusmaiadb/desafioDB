@@ -29,4 +29,4 @@ export function calcularTrocoComCedulasEMoedas(troco: number) {
   return resultado;
 }
 
-console.log(calcularTrocoComCedulasEMoedas(calcularTroco(287, 100)));
+console.log(calcularTrocoComCedulasEMoedas(calcularTroco(2, 0.1)));

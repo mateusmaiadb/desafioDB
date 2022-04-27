@@ -30,11 +30,22 @@ describe("Troco", () => {
     expect(troco).toEqual(resultado);
   });
 
-  test("Teste para 1.90 reais, para verrificar se todas as moedas estão sendo retornadas devidamente", () => {
+  test("Teste para 1.90 centavos, para verrificar se todas as moedas estão sendo retornadas devidamente", () => {
+    const valorPago = 2;
+    const valorCompra = 0.1;
 
-    const valorPago = 
+    const resultado = [
+      "Moeda de 1 quantidade: 1",
+      "Moeda de 0.5 quantidade: 1",
+      "Moeda de 0.25 quantidade: 1",
+      "Moeda de 0.1 quantidade: 1",
+      "Moeda de 0.05 quantidade: 1",
+    ];
 
+    const troco = calcularTrocoComCedulasEMoedas(
+      calcularTroco(valorPago, valorCompra)
+    );
 
-  })
-
+    expect(troco).toEqual(resultado);
+  });
 });
