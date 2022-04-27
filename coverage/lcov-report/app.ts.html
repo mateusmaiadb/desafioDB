@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>24/24</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
@@ -95,79 +95,70 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var cedulas: number[] = [100, 50, 20, 10, 5, 2];
 var moedas: number[] = [1, 0.5, 0.25, 0.1, 0.05];
 var troco: number;
-var valorPago = 100.49;
-var valorCompra = 100;
-&nbsp;
 &nbsp;
 export function calcularTroco(valorPago: number, valorCompra: number): number {
   troco = valorPago - valorCompra;
   return troco;
 }
 &nbsp;
-export function calcularTrocoComCedulas(troco: number): number {
-  for (var i = 0; i &lt; cedulas.length; i++) {
-    var qtdCedulas = Math.floor(troco / cedulas[i]);
-    troco = troco % cedulas[i];
-    console.log("Cédula de " + cedulas[i] + " quantidade: " + qtdCedulas);
-  }
-  return troco;
-}
+export function calcularTrocoComCedulasEMoedas(troco: number) {
+  let resultado: any = [];
 &nbsp;
-export function calcularMoedas(troco: number): number {
+  for (var i = 0; i &lt; cedulas.length; i++) {
+    var qtdCedulas = Math.floor(Math.floor(troco) / cedulas[i]);
+    if (qtdCedulas &gt; 0) {
+      troco = troco % cedulas[i];
+      resultado.push(`Cédula de ${cedulas[i]}   quantidade: ${qtdCedulas}`);
+    }
+  }
+&nbsp;
   for (var i = 0; i &lt; moedas.length; i++) {
     var qtdMoedas = Math.floor(troco / moedas[i]);
-    troco = troco % moedas[i];
-    troco = +troco.toFixed(2);
-    if (troco &lt; 0.05) {
-      troco = 0.05;
+    if (qtdMoedas &gt; 0) {
+      troco -= qtdMoedas * moedas[i];
+      troco = +troco.toFixed(2);
+      resultado.push(`Moeda de ${moedas[i]} quantidade: ${qtdMoedas}`);
     }
-    console.log(moedas[i] + ": " + qtdMoedas);
-    console.log(troco);
   }
-  return troco;
+  return resultado;
 }
-calcularMoedas(calcularTroco(valorPago, valorCompra));
+&nbsp;
+console.log(calcularTrocoComCedulasEMoedas(calcularTroco(100, 50.5)));
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -175,7 +166,7 @@ calcularMoedas(calcularTroco(valorPago, valorCompra));
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Apr 26 2022 10:34:50 GMT-0300 (GMT-03:00)
+                at Tue Apr 26 2022 15:58:51 GMT-0300 (GMT-03:00)
             </div>
         <script src="prettify.js"></script>
         <script>
